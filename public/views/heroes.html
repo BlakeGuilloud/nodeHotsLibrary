@@ -1,0 +1,12 @@
+<div class="jumbotron text-center">
+
+  <p>{{ tagline }}</p>
+  <div class="selectionWrapper">
+    <section ng-repeat="hero in bigHeroData">
+      <a href="#/heroes/{{hero.id}}">
+        <img src="../assets/images/{{hero.icon}}.png"alt="">
+        <p>{{ hero.name }}</p>
+      </a>
+    </section>
+  </div>
+</div>

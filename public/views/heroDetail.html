@@ -1,0 +1,90 @@
+<div class="detailWrapper">
+  <h2>{{oneHero.name}} the {{oneHero.title}}</h2>
+  <h5>Franchise: {{oneHero.franchise}}</h5>
+  <h6>- {{oneHero.role}}</h6>
+  <img src="../assets/images/{{oneHero.icon}}.png"alt="">
+  <p>{{oneHero.description}}</p>
+  <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+          <a class="navbar-brand" ng-click="showAbilities();">Abilities</a>
+      </div>
+      <div class="navbar-header">
+          <a class="navbar-brand" ng-click="showTalents();">Talents</a>
+      </div>
+      <div class="navbar-header">
+          <a class="navbar-brand" ng-click="showStats();">Stats</a>
+      </div>
+      <div class="navbar-header">
+          <a class="navbar-brand" ng-click="showRatings();">Ratings</a>
+      </div>
+  </nav>
+  <div ng-show="abilitiesBool" class="abilitiesWrapper">
+    <ul>
+      <li ng-repeat="ability in abilities">
+        <img src="../assets/images/{{ability.icon}}.png"alt="">
+        {{ability.name}}
+        Cooldown: {{ability.cooldown}}
+        <p>{{ability.description}}</p>
+      </li>
+    </ul>
+  </div>
+  <div ng-show="talentsBool" class="talentsWrapper">
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(1);">1</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(4);">4</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(7);">7</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(10);">10</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(13);">13</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(16);">16</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-click="displayTalents(20);">20</a>
+        </div>
+    </nav>
+    <ul>
+      <li ng-repeat="talent in talentDetail">
+        <img src="../assets/images/{{talent.icon}}.png"alt="">
+        {{talent.name}}
+        <p>{{talent.description}}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="statsWrapper" ng-show="statsBool">
+    Stats
+    <ul>
+      <h6>Base Stats</h6>
+      <li>Health: {{statsDetail.hp}}</li>
+      <li>Health Regeneration: {{statsDetail.hpRegen}}</li>
+      <li>Mana: {{statsDetail.mana}}</li>
+      <li>Mana Regeneration: {{statsDetail.manaRegen}}</li>
+    </ul>
+    <ul>
+      <h6>Per Level Stats</h6>
+      <li>Health Per Level: {{statsDetail.hpPerLevel}}</li>
+      <li>Health Regeneration Per Level: {{statsDetail.hpRegenPerLevel}}</li>
+      <li>Mana Per Level: {{statsDetail.manaPerLevel}}</li>
+      <li>Mana Regeneration Per Level: {{statsDetail.manaRegenPerLevel}}</li>
+    </ul>
+  </div>
+  <div class="ratingsWrapper" ng-show="ratingsBool">
+    Ratings
+    <ul>
+      <li>Complexity: {{ratingsDetail.complexity}}</li>
+      <li>Damage: {{ratingsDetail.damage}}</li>
+      <li>Survivability: {{ratingsDetail.survivability}}</li>
+      <li>Utility: {{ratingsDetail.utility}}</li>
+
+    </ul>
+  </div>
+</div>
