@@ -1,1 +1,12 @@
-angular.module('heroesApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'HeroesCtrl', 'HeroesService']);
+angular.module('heroesApp',
+  [
+    'ngRoute',
+    'appRoutes',
+    'MainCtrl',
+    'HeroesCtrl',
+    'HeroesService',
+    'ForumCtrl', 
+    'ForumService',
+    'GuideCtrl',
+    'GuideService'
+]);

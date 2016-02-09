@@ -1,0 +1,15 @@
+<h1>This is the Forum Page</h1>
+<div class="forumWrapper">
+  <section class="eSports">
+    <h3>E-Sports News</h3>
+    <a href="#/forum/{{category.id}}" ng-repeat="category in esports">
+      {{category.name}}
+    </a>
+  </section>
+  <section class="strategy">
+    <h3>Strategy</h3>
+    <a ng-repeat="category in strategy">
+      {{category.name}}
+    </a>
+  </section>
+</div>

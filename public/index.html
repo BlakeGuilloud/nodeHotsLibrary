@@ -14,28 +14,38 @@
    <!-- ANGULAR CUSTOM -->
    <script src="js/controllers/MainCtrl.js"></script>
    <script src="js/controllers/HeroesCtrl.js"></script>
+   <script src="js/controllers/ForumCtrl.js"></script>
+   <script src="js/controllers/GuideCtrl.js"></script>
+
    <script src="js/services/HeroesService.js"></script>
+   <script src="js/services/ForumService.js"></script>
+   <script src="js/services/GuideService.js"></script>
+
+
    <script src="js/appRoutes.js"></script>
    <script src="js/app.js"></script>
 </head>
-<body ng-app="heroesApp" ng-controller="HeroesController">
-<div class="container">
+<body ng-app="heroesApp" ng-controller="MainController">
+  <div class="container">
 
-    <!-- HEADER -->
-    <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#/">Home Controller</a>
-        </div>
+      <!-- HEADER -->
+      <nav class="navbar navbar-inverse">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#/">Home</a>
+          </div>
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#/heroes">Heroes</a>
+          </div>
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#/forum">Forum</a>
+          </div>
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#/guides">Guides</a>
+          </div>
+      </nav>
 
-        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
-        <ul class="nav navbar-nav">
-            <li><a href="#/heroes">Heroes Controller</a></li>
-        </ul>
-    </nav>
+      <ng-view></ng-view>
 
-    <!-- ANGULAR DYNAMIC CONTENT -->
-    <ng-view></ng-view>
-
-</div>
+  </div>
 </body>
 </html>
